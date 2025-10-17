@@ -34,19 +34,18 @@ Signed integers -> (+ / -)
 
 "Order of Magnitude" = Scientific Notation 	
 				
-Binary Subtraction instructions
-5 + (-3) = 2
-5 : 00000101
-3:  00000011
--3(flip), then add 1 -> 1111 1101
----------------------------------
-if (total > 1) -> carry pointer left
+**Binary Subtraction instructions**
 
-				
-Result: 1 0000 0011
+	5 + (-3) = 2
+	5 : 00000101
+	3:  00000011
+	-3(flip), then add 1 -> 1111 1101
+	---------------------------------
+	if (total > 1) -> carry pointer left
+	Result: 1 0000 0011
 
 
-Binary Fractional Values:
+**Binary Fractional Values:**
 8 4 2 1 .5 .25 .125 0.0625
 
 10.5 : 1010.1 
@@ -73,6 +72,7 @@ Right Shift
 
 
   
+
 
 
 
