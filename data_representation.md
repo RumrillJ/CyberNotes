@@ -1,9 +1,5 @@
-Computer Architecture Day 1 / 6
-2025 Oct 17
+**Common Techniques to Data Representation:**
 
-Common Techniques to Data Representation: 
-	
-LSA 1: Numbering Systems
 
 	Vocab: 
 		Positional number - A system for establishing how numeric values are represented (Left -> Right from significance) 
@@ -46,19 +42,22 @@ Signed integers -> (+ / -)
 
 
 **Binary Fractional Values:**
-8 4 2 1 .5 .25 .125 0.0625
 
-10.5 : 1010.1 
-10.25 : 1010.01
+	8 4 2 1 .5 .25 .125 0.0625
+		Ex: 10.5 : 1010.1 
+		Ex: 10.25 : 1010.01
 
-Shifters
-Left Shift
-0010 << 1 = 0100 
-0010 << 2 = 1000 
+**Shifters**
 
-Right Shift
-0010 >> 1 = 0001
-1011 >> 2 = 0010 
+	Left Shift:
+		0010 << 1 = 0100 
+		0010 << 2 = 1000 
+
+	Right Shift:
+		0010 >> 1 = 0001
+		1011 >> 2 = 0010 
+
+
 
 
 
@@ -72,6 +71,7 @@ Right Shift
 
 
   
+
 
 
 
