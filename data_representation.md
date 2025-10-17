@@ -29,10 +29,6 @@ num 42
 0    0	1 0  1 0 1 0 
 
 0010 
-
-Binary Decimal Val
-8 4 2 1 .5 .25 .125 0.0625
-
 Negative Binary Val 
 Signed integers -> (+ / -) 
 
@@ -49,8 +45,14 @@ if (total > 1) -> carry pointer left
 				
 Result: 1 0000 0011
 
-Binary Shifters
 
+Binary Fractional Values:
+8 4 2 1 .5 .25 .125 0.0625
+
+10.5 : 1010.1 
+10.25 : 1010.01
+
+Shifters
 Left Shift
 0010 << 1 = 0100 
 0010 << 2 = 1000 
@@ -59,8 +61,6 @@ Right Shift
 0010 >> 1 = 0001
 1011 >> 2 = 0010 
 
-
-			
 
 
 
@@ -73,6 +73,7 @@ Right Shift
 
 
   
+
 
 
 
