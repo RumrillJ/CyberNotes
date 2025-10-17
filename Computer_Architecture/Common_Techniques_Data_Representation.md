@@ -2,6 +2,22 @@
 
 ---
 
+# Table of Contents
+  - [Vocabulary](#vocabulary)
+  - [Binary — Digital Values](#binary--digital-values)
+  - [Octal](#octal)
+  - [Hexadecimal](#hexadecimal)
+  - [Converting Between Binary, Octal, and Hexadecimal](#converting-between-binary-octal-and-hexadecimal)
+  - [Floating-Point Arithmetic](#floating-point-arithmetic)
+    - [IEEE 754 Formats](#ieee-754-formats)
+  - [Text, Audio, Image, and Video](#text-audio-image-and-video)
+  - [Executables](#executables)
+  - [Compression](#compression)
+    - [Run-Length Encoding (RLE)](#run-length-encoding-rle)
+    - [Compression Types](#compression-types)
+  - [Check on Learning](#check-on-learning)
+
+
 ##  Vocabulary
 
 | Term | Description |
