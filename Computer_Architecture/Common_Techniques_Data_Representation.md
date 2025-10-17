@@ -120,8 +120,8 @@ Each right shift divides the value by **2ⁿ**, where *n* is the number of posit
 |Place value in Decimal| 4096 | 512 | 64 | 8 | 1 | 
 
 Octal to Decimal Examples:
-24_8 -> (8 * 2) + (4 * 1) = 20
-457_8 -> (64 * 4) + (8 * 5) + (7 * 1) = 303
+24_8 -> (2 * 8^1) + (4 * 8^0) = 20
+457_8 -> (64* 4) + (8 * 5) + (7 * 1) = 303
 357_8 -> (64 * 3) + (8 * 5) + (7 * 1) = 239
 
 Decimal to Octal Examples:
