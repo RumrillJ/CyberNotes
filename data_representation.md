@@ -74,7 +74,7 @@ Step 4: Drop the overflow (leftmost 1)
 Result → 0000 0010 = 2
 ```
 
-# Binary Shifters and Order of Magnitude
+# Binary Shifters
 
 ## Binary Shifters
 
@@ -129,6 +129,7 @@ Each right shift divides the value by **2ⁿ**, where *n* is the number of posit
 
 
   
+
 
 
 
