@@ -147,20 +147,22 @@ Octal Addition Example:
 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A | B | C | D | E | F |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15| 
+Hex uses **power of 16**, compared to binary that uses powers of 2
 
-Hexadecimal number of : D1CE 
-
+Hex to Decimal examples: 
+**D1CE_16**
 D = 13 * 4096
 1 = 1 * 256
 C = 12 * 16
 E = 14 * 1
 53710_10
 
-BE_16 
-
+**BE_16 **
 11 * 16
 14 * 1 
 190_10 
+
+Decimal to Hex examples: 
 
 # Hexadecimal Addition 
 4A + 5C 
