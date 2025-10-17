@@ -85,7 +85,7 @@ Each shift changes the binary value by a power of two.
 
 ###  Left Shift (`<<`)
 
-A **left shift** moves all bits to the left and fills the empty rightmost bits with zeros.  
+ **left shift** moves all bits to the left and fills the empty rightmost bits with zeros.  
 Each left shift multiplies the value by **2ⁿ**, where *n* is the number of positions shifted.
 
 | Expression | Binary Before | Binary After | Decimal Before | Decimal After | Operation |
@@ -99,7 +99,7 @@ Each left shift multiplies the value by **2ⁿ**, where *n* is the number of pos
 
 ###  Right Shift (`>>`)
 
-A **right shift** moves all bits to the right and fills the leftmost bits with zeros (for unsigned values).  
+ **right shift** moves all bits to the right and fills the leftmost bits with zeros (for unsigned values).  
 Each right shift divides the value by **2ⁿ**, where *n* is the number of positions shifted.
 
 | Expression | Binary Before | Binary After | Decimal Before | Decimal After | Operation |
@@ -109,7 +109,18 @@ Each right shift divides the value by **2ⁿ**, where *n* is the number of posit
 | `1100 >> 3` | 1100 | 0001 | 12 | 1 | ÷ 8 |
 | `0011 >> 1` | 0011 | 0001 | 3 | 1 | ÷ 2 |
 
-> ⚙️ Note: In signed integers, **arithmetic right shifts** may preserve the sign bit (1 for negative).
+>  Note: In signed integers, **arithmetic right shifts** may preserve the sign bit (1 for negative).
+
+
+# Octal
+
+**Octal** uses divisions of 8 and the result is the remainder in reverse order from base 10 -> base 8. 
+
+
+
+# Hexadecimal
+
+
 
 **End of Notes**
 
