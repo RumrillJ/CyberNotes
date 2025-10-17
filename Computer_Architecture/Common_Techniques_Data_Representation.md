@@ -111,58 +111,78 @@ Each right shift divides the value by **2ⁿ**, where *n* is the number of posit
 
 >  Note: In signed integers, **arithmetic right shifts** may preserve the sign bit (1 for negative).
 
-
 # Octal
 
-**Octal** uses divisions of 8 and the result is the remainder in reverse order from base 10 -> base 8. 
-|Base^Place | 8^4 | 8^3 | 8^2 | 8^1 | 8^0 | 
-|-------------|----------------|---------------|----------------|---------------|---------------|
-|Place value in Decimal| 4096 | 512 | 64 | 8 | 1 | 
+**Octal** uses divisions of 8, and the result is the remainder in reverse order when converting from base 10 → base 8.
 
-Octal to Decimal Examples:
-24_8 -> (2 * 8^1) + (4 * 8^0) = 20
-457_8 -> (64* 4) + (8 * 5) + (7 * 1) = 303
-357_8 -> (64 * 3) + (8 * 5) + (7 * 1) = 239
+| Base^Place | 8⁴ | 8³ | 8² | 8¹ | 8⁰ |
+|-------------|----|----|----|----|----|
+| Place Value (Decimal) | 4096 | 512 | 64 | 8 | 1 |
 
-Decimal to Octal Examples:
-98 -> (64 * 1) + (8 * 4) + 2 = 142_8
-121 -> (64 * 1) (8 * 7) + 1 = 171_8 
-128 -? (64 * 2) = 200_8
+---
 
-Octal Addition Example: 
-171 + 246 = 437_8 
-1 7 1 
-2 4 6
-------
-4 3 7
+## Octal to Decimal Examples
 
-765 + 167 = 1154_8 
-1 7^1 6^1 5 
-  1 6 7
-----------
-1 1 5 4
+| Octal | Formula | Decimal |
+|--------|----------|----------|
+| 24₈ | (2 × 8¹) + (4 × 8⁰) | **20** |
+| 457₈ | (4 × 64) + (5 × 8) + (7 × 1) | **303** |
+| 357₈ | (3 × 64) + (5 × 8) + (7 × 1) | **239** |
+
+---
+
+## Decimal to Octal Examples
+
+| Decimal | Conversion | Octal |
+|----------|-------------|--------|
+| 98 | (64 × 1) + (8 × 4) + 2 | **142₈** |
+| 121 | (64 × 1) + (8 × 7) + 1 | **171₈** |
+| 128 | (64 × 2) | **200₈** |
+
+---
+
+## Example: Add 171₈ + 246₈
+| Column | Calculation (Base 8) | Carry | Result Digit |
+|---------|----------------------|--------|----------------|
+| **Ones** | 1 + 6 = **7** | 0 | 7 |
+| **Eights** | 7 + 4 = **13 (₈)** → 1 carry, 3 write down | 1 | 3 |
+| **Sixty-fours** | 1 + 2 + 1(carry) = **4** | 0 | 4 |
+
+**437₈**
+
+### Example: Add 765₈ + 167₈
+
+| Column | Addition | Decimal Sum | Convert to Octal | Write Down | Carry |
+|:-------:|:----------:|:--------------:|:----------------:|:------------:|:-------:|
+| Ones | 5 + 7 | 12 | 12₁₀ = 14₈ | 4 | 1 |
+| Eights | 6 + 6 + 1(carry) | 13 | 13₁₀ = 15₈ | 5 | 1 |
+| Sixty-fours | 7 + 1 + 1(carry) | 9 | 9₁₀ = 11₈ | 1 | 1 |
+
+**Carry the last 1 = 1154₈**
+
 
 # Hexadecimal
-**Hexadecimal** employs a system of 16 digits containing numbers (0 - 9) and characters (A to F)
-| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A | B | C | D | E | F |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15| 
-Hex uses **power of 16**, compared to binary that uses powers of 2
 
-Hex to Decimal examples: 
-**D1CE_16**
-D = 13 * 4096
-1 = 1 * 256
-C = 12 * 16
-E = 14 * 1
-53710_10
+**Hexadecimal** employs a system of 16 symbols — digits **0–9** and characters **A–F**.
 
-**BE_16 **
-11 * 16
-14 * 1 
-190_10 
+| Symbol | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A | B | C | D | E | F |
+|---------|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Value   | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 |
+
+Hexadecimal numbers use **powers of 16**, whereas binary uses **powers of 2**.
+
+---
+
+## Hex to Decimal Examples
+
+| Hex | Breakdown | Decimal |
+|------|------------|----------|
+| D1CE₁₆ | (13 × 4096) + (1 × 256) + (12 × 16) + (14 × 1) | **53710₁₀** |
+| BE₁₆ | (11 × 16) + (14 × 1) | **190₁₀** |
+
 
 Decimal to Hex examples: 
+(You can compute these using repeated division by 16 and recording remainders.)
 
 # Hexadecimal Addition 
 4A + 5C 
@@ -178,103 +198,153 @@ A - B = (10 - 11) -> Borrow 1 from 5 -> (26 - 11) = 15
 15 = F in Hex
 1F 
 
-# Converting between Binary, Octal, and Hexadecimal 
-Binary, Octal, and Hexadecimal are all powers of 2: 
+# Converting Between Binary, Octal, and Hexadecimal
 
-| Base 16 | 16 ^ 3 |---|---|---|16^2|---|---|---|16^1|---|---|---|16^0|
-| Base 8 | 8 ^ 4 |---|---|8^3|---|---|8^2|---|---|8^1|---|---| 8^0|
-| Base 2 | 2^12 | 2^11 | 2^10 | 2^9 | 2^8 | 2^7 | 2^6| 2^5 | 2^4 | 2^3 | 2^2 | 2^1 | 2^0 |
-|Place Value in decimal|4096|2048|1024|512|256|128|64|32|16|8|4|2|1|
-Each octal digit = 3 bits
-Each hexadecimal dgit = 4 bits 
+Binary, Octal, and Hexadecimal are all **powers of 2**:
 
-# Hex to Octal Conversion Examples (Octal can only hold 3 bits) 
-1FB9 
-1 = 0001
-F(15) = 1111 
-B(11) = 1011 
-9 = 1001
-0 001 111 101 111 001
-0  1  7   6    7   1 
+| Base | Powers of | Example Range |
+|-------|------------|----------------|
+| Base 16 | 16⁰ → 16³ | 1 Hex Digit = 4 Bits |
+| Base 8 | 8⁰ → 8⁴ | 1 Octal Digit = 3 Bits |
+| Base 2 | 2⁰ → 2¹² | Binary Representation |
 
-# Octal to Hex 
-574_8
-to Binary
-5    7   4
-000 101 111 100
+| Place (Decimal) | 4096 | 2048 | 1024 | 512 | 256 | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
 
-to Hex 
-0001 0111 1100
-1      7   C_16  
+---
 
+## Hex to Octal Conversion Example
 
-# Floating-Point Artihmetic
-Number 123.75 is a real number, computers process and store this number as a **Floating Point Number**. 
-IEEE 754 defines how floating-point numbers are stored in scientific notation
-- Sign Bit (0 if value is positive (+) and 1 if negative(-)
-- Exponent
-- Mantissa (stores bit of the significant located after the decimal point
-  
--Represents real numbers as an approximation to support trade off between range and precision
--Often used in systems with very small and very large real numbers for faster processing times 
+**Convert:** `1FB9₁₆`
 
-Two most common IEEE 754 floating point standard supports 32 Bit single precision and 64 Bit double precision
-32 Bits -> Sign(1 Bit) | Exponent (8 Bits) | Mantissa (23 Bits)
-64 Bits -> Sign(1 Bit) | Exponent (11 Bits) | Mantissa (52 Bits) 
+| Hex | Binary Equivalent |
+|------|--------------------|
+| 1 | 0001 |
+| F (15) | 1111 |
+| B (11) | 1011 |
+| 9 | 1001 |
 
-# Text, Audio, Image, and Video 
-File extensions & formats are standard forms of encoding data within a file 
-Files have characteristics dependent on Software
-Encoded information is just 1's and 0's in abstract forms
-	-abstraction: identifying simpler components in an abstract format
-File formatting is done by representing bits as Hex values which are interpreted by the program to produce an output or px in img
+Combine → `0001 1111 1011 1001`  
+Group into 3-bit sections (for Octal):  
+`000 111 110 111 001` → **017671₈**
+
+## Example: Convert 574₈ to Binary
+| Octal Digit | Binary Equivalent |
+|--------------|-------------------|
+| 5 | 101 |
+| 7 | 111 |
+| 4 | 100 |
+
+## Example: Convert 0001 0111 1100₂ to Hexadecimal
+| Binary | Hex |
+|---------|-----|
+| 0001 | 1 |
+| 0111 | 7 |
+| 1100 | C |
 
 
-# Text 
-Text files are composed of data in ASCII (American Standard Code for Information Exchange) 
-Extended ASCII uses 8 bits representing 256 Characters/Symbols 
-Each character in ASCII table represents binary value 
+# Floating-Point Arithmetic
 
-# Audio
-Analog signal is continuous wave with potential for infinite resolution.
-Anything that makes noise product Analog Signals (Sound Wave)
+Numbers like **123.75** are real numbers. Computers represent these using **floating-point numbers**.
 
-# Image
-Image is comprised of pixels
-3 8-bit color values for RGB(Red, Green, Blue)
-Colors referred to a combination of 6 Hex Symbols 
-Red color in Hex (FF 00 00) (Red, 0 Green, 0 Blue) 
-Red color in Binary 11111111 00000000 00000000 
-						R        G        B 
+**IEEE 754 Standard** defines this storage using **scientific notation**:
 
-# Video 
-Process of streaming images over frames per seconds (FPS (Frame Rate))
-Rapid Sucession of images create "Motion" 
-Common FPS
-25 for Film
-25 or 30 for Digital Video
-30 for Standard Broadcast 
+| Component | Description |
+|------------|--------------|
+| **Sign Bit** | 0 for positive, 1 for negative |
+| **Exponent** | Represents power of 2 |
+| **Mantissa** | Fractional part after the decimal |
 
+Floating-point numbers provide a **trade-off between range and precision**, enabling representation of extremely small or large values.
 
-**File Examples**
-Examples of Text: pdf, rtf
-Examples of Audio: mp3, wav
-Examples of Image: png, bmp
-Examples of Video: avi, mpeg 
+### IEEE 754 Formats
 
-# Executables 
-**Executable** is a series of instructions a computer directly performed 
-(Humans can't read executable code, but can read source code)
+| Precision | Total Bits | Sign | Exponent | Mantissa |
+|------------|-------------|------|-----------|-----------|
+| 32-bit (Single) | 32 | 1 | 8 | 23 |
+| 64-bit (Double) | 64 | 1 | 11 | 52 |
 
-To transform src file into exe file -> pass through compiler or assembler
+---
 
-|Compiler | translates src code from a high-level programming language to machine language to create executable program|
-|---|---| 
-|Assembler| takes assembly code and conver to machine code (checks instructions for syntax and/or logic errors and conducts diagnosis for errors | 
+# Text, Audio, Image, and Video
 
-# Compression 
-**Compression** allows reduction in data size o a file to be stored/transmitted efficiently
-(RLE) Run-Length Encoding is a method of data compression, when a run is a repeated occurence of the same value.
+File extensions and formats define **how data is encoded**.
+
+- All files are made of bits (1s and 0s).
+- File formats interpret those bits into meaningful forms (text, image, audio, etc.).
+- **Abstraction** — simplifying data representation for easier processing.
+
+---
+
+## Text
+
+- Text files use **ASCII** (American Standard Code for Information Interchange).  
+- **Extended ASCII** uses 8 bits → 256 characters/symbols.  
+- Each character maps to a unique binary value.
+
+---
+
+## Audio
+
+- **Analog Signal**: Continuous wave with infinite possible values.
+- Sound waves are analog signals; digital systems sample and quantize them.
+
+---
+
+## Image
+
+- An **image** is made up of **pixels**.
+- Each pixel uses 3 × 8-bit color values (for **RGB**: Red, Green, Blue).
+- **Example:**
+  - Red in Hex: `#FF0000`
+  - Red in Binary: `11111111 00000000 00000000`
+    - R = 255, G = 0, B = 0
+
+---
+
+# Video
+
+The **video** process involves streaming images over frames per second (**FPS** or *Frame Rate*).  
+A rapid succession of images creates the illusion of **motion**.
+
+### Common Frame Rates
+- **25 FPS** – Standard for Film  
+- **25 or 30 FPS** – Common for Digital Video  
+- **30 FPS** – Standard Broadcast Rate  
+
+---
+
+## File Examples
+
+| Type | Example File Formats |
+|------|------------------------|
+| **Text** | `.pdf`, `.rtf` |
+| **Audio** | `.mp3`, `.wav` |
+| **Image** | `.png`, `.bmp` |
+| **Video** | `.avi`, `.mpeg` |
+
+---
+
+# Executables
+
+An **executable** is a series of instructions that a computer can perform directly.  
+Humans can read **source code**, but not executable machine code.
+
+To transform a source file into an executable file, it must pass through a **compiler** or **assembler**.
+
+| Tool | Description |
+|------|--------------|
+| **Compiler** | Translates source code from a high-level programming language into machine language to create an executable program. |
+| **Assembler** | Converts assembly code to machine code, checks for syntax and logic errors, and performs diagnostics. |
+
+---
+
+# Compression
+
+**Compression** reduces the size of data files so they can be stored or transmitted more efficiently.
+
+### Run-Length Encoding (RLE)
+RLE is a **lossless compression** method that represents consecutive repeated values (runs) as a single value and count.
+
 AAAAAAAAAAbbbbbbbbbbbbbCccccDDDDDDDDD (37 Characters/37 Bytes)
 AADb1C4C9D(10 Bytes) - utilizes base 16 (Hexadecimal) 
 
@@ -282,35 +352,65 @@ Example:
 ABBAAB (6 Characters / 6 Bytes)
 1A2B2A1B (8 Bytes) 
 
-Lossless Compression - Reduces file size without losing quality 
-Lossy Compression - Allows for variable quality levels by decreasing file size. At higher levels of compression, deterioration becomes noticable. 
+## Compression Types
 
-# Check on Learning
-What would the signed byte 1111 1010 be converted to decimal? 
-*Swap binary = 0000 0101 = 5, then + 1 = -6 
+- **Lossless Compression**  
+  Reduces file size **without losing quality** — data can be fully restored to its original form.
 
-What is the hexadecimal A6 in Decimal (base 10)? (10 * 16) + (6 * 1) = 166
+- **Lossy Compression**  
+  Allows for **variable quality levels** by decreasing file size.  
+  At higher levels of compression, **deterioration becomes noticeable**.
 
-What is base 8 called? Octal
+---
 
-What is base 16 called? Hexadecimal 
+## Check on Learning
 
-In signed artithmetic what does the leftmost number represent? Sign of a number 
+**1. What would the signed byte `1111 1010` be converted to in decimal?**  
+→ Swap binary: `0000 0101 = 5`, then +1 = **-6**
 
-What arithmetic uses formulaic representation of real numbers as an approximation? Floating-Point Arithmetic
+---
 
-Text files are composed of data in what language? ASCII
+**2. What is the hexadecimal `A6` in decimal (base 10)?**  
+→ (10 × 16) + (6 × 1) = **166**
 
-What translates source code from a high-level programming language to a machine level language? Compiler 
+---
 
-What is AAbbCCCdD after performing RLE? 2A2b3C1d1D
+**3. What is base 8 called?**  
+→ **Octal**
+
+---
+
+**4. What is base 16 called?**  
+→ **Hexadecimal**
+
+---
+
+**5. In signed arithmetic, what does the leftmost number represent?**  
+→ **Sign of the number**
+
+---
+
+**6. What arithmetic uses formulaic representation of real numbers as an approximation?**  
+→ **Floating-Point Arithmetic**
+
+---
+
+**7. Text files are composed of data in what language?**  
+→ **ASCII**
+
+---
+
+**8. What translates source code from a high-level programming language to machine-level language?**  
+→ **Compiler**
+
+---
+
+**9. What is `AAbbCCCdD` after performing Run-Length Encoding (RLE)?**  
+→ **2A2b3C1d1D**
+
+---
 
 **End of Notes**
-
-
-
-
-
 
 
 
