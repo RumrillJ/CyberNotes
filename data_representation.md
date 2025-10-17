@@ -14,15 +14,15 @@
 		DW - 32 Bits || 4 Bytes || 2 W
 		QW - 64 Bits || 8 Bytes || 4 W || 2 DW
 
-Binary Samples (Binary values can be signed (+ / -) 
-num36 
-128 64 32 16 8 4 2 1
-	1	1
-0100100
-
-num 42
-128 64 32 16 8 4 2 1 
-0    0	1 0  1 0 1 0 
+Binary Samples (Binary values can be signed (+ / -) <br/>
+num36 <br/>
+128 64 32 16 8 4 2 1 <br/>
+	1	1			<br/>
+0100100 
+</br>
+num 42 <br/>
+128 64 32 16 8 4 2 1 <br/> 
+0    0	1 0  1 0 1 0  <br/>
 
 0010 
 Negative Binary Val 
@@ -71,6 +71,7 @@ Signed integers -> (+ / -)
 
 
   
+
 
 
 
